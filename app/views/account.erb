@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% binding.pry %>
-    <h1>"Welcome, <%=@user.name%>!"</h1>
-    <%=binding.pry%>
+    <% if Helpers.is_logged_in?(session) %>
+  
+      <h1>"Welcome, <%=@user.name%>!"</h1>
+      <%=binding.pry%>
+    <% end %>
 
 
 
