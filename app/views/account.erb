@@ -11,7 +11,7 @@
       <h3>Your Balance: <%= Helpers.current_user(session).balance %>.0</h3>
       <a href="/logout">Log Out</a>
     <% else %>
-      <p>You Must <a href="/">Log In</a> to View Your Balance</p>
+      <p> <%= erb :error %>
     <% end %>
   </body>
 </html>
